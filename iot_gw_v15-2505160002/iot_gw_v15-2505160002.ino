@@ -874,7 +874,7 @@ boolean beginConnection()
     return true;  // 연결 성공
   }
   else {
-    if (timeout_cnt > 1) { //세번 재접속 실패시 리셋 -> 로그확인결과 1,2번째 재접속 시도시 붙은 적이 없음 세번까지 재접속할 필요 없음
+    if (timeout_cnt > 1) { //세번 재접속 실패시 리셋 -> 2번 시도  /  로그확인결과 1,2번째 재접속 시도시 붙은 적이 없음 세번까지 재접속할 필요 없음
       timeout_cnt = 0;
       mqttClient.disconnect();
 
